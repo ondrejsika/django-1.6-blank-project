@@ -97,3 +97,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static')
 
 MEDIA_URL = '/static/uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'uploads')
+
+try:
+    from settings_local import *
+except ImportError:
+    pass
+
